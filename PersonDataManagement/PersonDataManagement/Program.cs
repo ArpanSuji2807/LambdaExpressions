@@ -6,7 +6,7 @@ class program
     {
         PersonManagement personManagement = new PersonManagement();
         bool end = true;
-        Console.WriteLine("1.Add Person Data\n2.Get Top two records\n3.Get all record between age 13 to 18\n4.Average Age");
+        Console.WriteLine("1.Add Person Data\n2.Get Top two records\n3.Get all record between age 13 to 18\n4.Average Age\n5.Check for a specific name");
         while(end)
         {
             Console.WriteLine("Take an option to execute");
@@ -24,6 +24,9 @@ class program
                     break;
                 case 4:
                     personManagement.AverageAge();
+                    break;
+                case 5:
+                    personManagement.CheckForSpecificName();
                     break;
             }
         }

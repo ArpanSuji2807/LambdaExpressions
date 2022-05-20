@@ -43,5 +43,18 @@ namespace PersonDataManagement
             var average = this.personsList.Average(x => x.Age);
             Console.WriteLine(average);
         }
+        public void CheckForSpecificName()
+        {
+            var name = this.personsList.Where(x => x.Name == "Vivek");
+            if(name!=null)
+            {
+                Console.WriteLine("Name is present in the list");
+            }
+            else
+            {
+                Console.WriteLine("Name is not present in the list");
+            }
+            Display(name);
+        }
     }
 }
