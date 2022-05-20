@@ -38,5 +38,10 @@ namespace PersonDataManagement
             var result = this.personsList.Where(x => x.Age > 13 && x.Age < 18);
             Display(result);
         }
+        public void AverageAge()
+        {
+            var average = this.personsList.Average(x => x.Age);
+            Console.WriteLine(average);
+        }
     }
 }
