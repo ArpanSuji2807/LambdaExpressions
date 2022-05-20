@@ -15,6 +15,11 @@ namespace PersonDataManagement
             personsList.Add(new Person { SSN = 101, Name = "Ravi", Address = "Kalimpong", Age = 65 });
             personsList.Add(new Person { SSN = 102, Name = "Raj", Address = "Siliguri", Age = 75 });
             personsList.Add(new Person { SSN = 103, Name = "Ashok", Address = "Kurseong", Age = 35 });
+            personsList.Add(new Person { SSN = 100, Name = "Raju", Address = "Kolkata", Age = 33 });
+            personsList.Add(new Person { SSN = 101, Name = "Stephen", Address = "Durgapur", Age = 85 });
+            personsList.Add(new Person { SSN = 102, Name = "Amrit", Address = "Jalpaiguri", Age = 55 });
+            personsList.Add(new Person { SSN = 103, Name = "Vivek", Address = "Jaigaon", Age = 45 });
+            Display(personsList);
         }
         public void GetTopRecords()
         {
@@ -27,6 +32,11 @@ namespace PersonDataManagement
             {
                 Console.WriteLine(person.SSN + " " + person.Name + " " + person.Address + " " + person.Age);
             }
+        }
+        public void GetAllRecords()
+        {
+            var result = this.personsList.Where(x => x.Age > 13 && x.Age < 18);
+            Display(result);
         }
     }
 }
