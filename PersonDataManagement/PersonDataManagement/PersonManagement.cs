@@ -16,10 +16,17 @@ namespace PersonDataManagement
             personsList.Add(new Person { SSN = 102, Name = "Raj", Address = "Siliguri", Age = 75 });
             personsList.Add(new Person { SSN = 103, Name = "Ashok", Address = "Kurseong", Age = 35 });
         }
+        public void GetTopRecords()
+        {
+            var result = this.personsList.Where(x => x.Age < 60).Take(2);
+            Display(result);
+        }
         public void Display(IEnumerable<Person> list)
         {
-            foreach (Person person in list)
-                Console.WriteLine(person.Name);
+            foreach (var person in list)
+            {
+                Console.WriteLine(person.SSN + " " + person.Name + " " + person.Address + " " + person.Age);
+            }
         }
     }
 }
