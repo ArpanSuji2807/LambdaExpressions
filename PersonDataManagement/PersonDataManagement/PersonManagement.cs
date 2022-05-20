@@ -56,5 +56,10 @@ namespace PersonDataManagement
             }
             Display(name);
         }
+        public void SkipRecordForAge()
+        {
+            var age=this.personsList.Skip(this.personsList.Where(x => x.Age < 60).Count());
+            Display(age);
+        }
     }
 }
