@@ -61,5 +61,11 @@ namespace PersonDataManagement
             var age=this.personsList.Skip(this.personsList.Where(x => x.Age < 60).Count());
             Display(age);
         }
+        public void RemoveSpecificName()
+        {
+            Person specificName = this.personsList.Find(x => x.Name == "Raj");
+            this.personsList.Remove(specificName);
+            Display(this.personsList);
+        }
     }
 }
